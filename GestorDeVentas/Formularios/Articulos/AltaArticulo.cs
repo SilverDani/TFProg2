@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GestorDeVentas
+namespace GestorDeVentas.Formularios.Articulos
 {
-    public partial class Form1 : Form
+    public partial class AltaArticulo : Form
     {
-        public Form1()
+        public AltaArticulo()
         {
             InitializeComponent();
         }
