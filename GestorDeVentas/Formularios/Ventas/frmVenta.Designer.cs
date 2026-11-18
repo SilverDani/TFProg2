@@ -1,6 +1,6 @@
 ﻿namespace GestorDeVentas.Formularios.Ventas
 {
-    partial class Venta
+    partial class frmVenta
     {
         /// <summary>
         /// Required designer variable.

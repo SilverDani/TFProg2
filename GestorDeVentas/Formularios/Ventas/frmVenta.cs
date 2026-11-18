@@ -2,9 +2,9 @@
 
 namespace GestorDeVentas.Formularios.Ventas
 {
-    public partial class Venta : Form
+    public partial class frmVenta : Form
     {
-        public Venta()
+        public frmVenta()
         {
             InitializeComponent();
         }//Constructor

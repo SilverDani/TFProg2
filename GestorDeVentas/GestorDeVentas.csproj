@@ -105,11 +105,11 @@
     <Compile Include="Formularios\Proveedores\ModificarProveedor.Designer.cs">
       <DependentUpon>ModificarProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Ventas\Venta.cs">
+    <Compile Include="Formularios\Ventas\frmVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Ventas\Venta.Designer.cs">
-      <DependentUpon>Venta.cs</DependentUpon>
+    <Compile Include="Formularios\Ventas\frmVenta.Designer.cs">
+      <DependentUpon>frmVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>

@@ -1,17 +1,25 @@
-﻿using GestorDeVentas.Formularios.Articulos;
+﻿using GestorDeVentas.Clases;
+using GestorDeVentas.Formularios.Articulos;
 using GestorDeVentas.Formularios.Clientes;
 using GestorDeVentas.Formularios.Proveedores;
 using GestorDeVentas.Formularios.Ventas;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace GestorDeVentas
 {
     public partial class Principal : Form
     {
+        private List<Proveedor> proveedor;
         public Principal()
         {
             InitializeComponent();
         }//Constructor
+
+        private void Principal_Load(object sender, System.EventArgs e)
+        {
+            proveedor = new List<Proveedor>();
+        }//Load
 
         private void AbrirFormHijos(object formHijo)
         {
@@ -22,6 +30,9 @@ namespace GestorDeVentas
             Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.None;
+            fh.Left = (pnlContenedor.Width - fh.Width) / 2;
+            fh.Top = (pnlContenedor.Height - fh.Height) / 2;
+            this.pnlContenedor.Controls.Add(fh);
             this.pnlContenedor.Tag = fh;
             fh.Show();
         }//AbrirFormHijos
@@ -44,7 +55,7 @@ namespace GestorDeVentas
 
         private void altaProveedorToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new AltaProveedor());
+            AbrirFormHijos(new AltaProveedor(proveedor));
 
         }
 
@@ -78,7 +89,7 @@ namespace GestorDeVentas
 
         private void realizarVentaToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new Venta());
+            AbrirFormHijos(new frmVenta());
         }
     }//Class
 }//Namespace
