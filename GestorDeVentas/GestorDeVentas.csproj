@@ -122,6 +122,9 @@
     <EmbeddedResource Include="Formularios\Proveedores\AltaProveedor.resx">
       <DependentUpon>AltaProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Proveedores\BajaProveedor.resx">
+      <DependentUpon>BajaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>

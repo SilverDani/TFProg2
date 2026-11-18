@@ -11,6 +11,8 @@ namespace GestorDeVentas
     public partial class Principal : Form
     {
         private List<Proveedor> proveedor;
+        private List<Cliente> cliente;
+        private List<Articulo> articulo;
         public Principal()
         {
             InitializeComponent();
@@ -39,17 +41,17 @@ namespace GestorDeVentas
 
         private void altaCleintesToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new AltaClientes());
+            AbrirFormHijos(new AltaClientes(cliente));
         }
 
         private void modificarCleinteToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new ModifarCliente());
+            AbrirFormHijos(new ModifarCliente(cliente));
         }
 
         private void bajaClienteToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new BajaCliente());
+            AbrirFormHijos(new BajaCliente(cliente));
 
         }
 
@@ -61,35 +63,35 @@ namespace GestorDeVentas
 
         private void toolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new ModificarProveedor());
+            AbrirFormHijos(new ModificarProveedor(proveedor));
 
         }
 
         private void bajaProveedorToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new BajaProveedor());
+            AbrirFormHijos(new BajaProveedor(proveedor));
 
         }
 
         private void altaArticuloToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new AltaArticulo());
+            AbrirFormHijos(new AltaArticulo(articulo));
 
         }
 
         private void modificarArticuloToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new ModificarArticulo());
+            AbrirFormHijos(new ModificarArticulo(articulo));
         }
 
         private void bajaArticuloToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new BajaArticulo());
+            AbrirFormHijos(new BajaArticulo(articulo));
         }
 
         private void realizarVentaToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new frmVenta());
+            AbrirFormHijos(new frmVenta(cliente, proveedor, articulo));
         }
     }//Class
 }//Namespace
