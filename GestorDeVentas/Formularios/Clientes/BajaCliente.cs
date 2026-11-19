@@ -18,6 +18,16 @@ namespace GestorDeVentas.Formularios.Clientes
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
+
+            Cliente cliSeleccionado = (Cliente)dgvClientes.Rows[e.RowIndex].DataBoundItem;
+
+            idSeleccionado = cliSeleccionado.IdCliente;
+
+            txtNombre.Text = cliSeleccionado.Nombre;
+            txtApellido.Text = cliSeleccionado.Apellido;
+            txtCUIL.Text = cliSeleccionado.CUIL;
+            dtpNacimiento.Value = cliSeleccionado.FechaNacimiento;
 
         }//dgv cell click
 
@@ -27,7 +37,7 @@ namespace GestorDeVentas.Formularios.Clientes
             {
                 if (idSeleccionado <= 0)
                 {
-                    MessageBox.Show("Seleccione un proveedor.");
+                    MessageBox.Show("Seleccione un Cliente.");
                     return;
                 }//if
 

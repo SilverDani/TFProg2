@@ -96,18 +96,18 @@ namespace GestorDeVentas
 
         private void altaArticuloToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new AltaArticulo(articulo));
+            AbrirFormHijos(new AltaArticulo(articulo,proveedor));
 
         }
 
         private void modificarArticuloToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new ModificarArticulo(articulo));
+            AbrirFormHijos(new ModificarArticulo(articulo,proveedor));
         }
 
         private void bajaArticuloToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new BajaArticulo(articulo));
+            AbrirFormHijos(new BajaArticulo(articulo, proveedor));
         }
 
         private void realizarVentaToolStripMenuItem_Click(object sender, System.EventArgs e)

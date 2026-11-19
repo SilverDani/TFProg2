@@ -37,7 +37,7 @@ namespace GestorDeVentas.Formularios.Clientes
             {
                 if(idSeleccionado<=0)
                 {
-                    MessageBox.Show("Seleccione un cliente,");
+                    MessageBox.Show("Seleccione un cliente.");
                     return;
                 }//if
 
