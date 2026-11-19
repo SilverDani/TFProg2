@@ -1,12 +1,20 @@
-﻿using System.Windows.Forms;
+﻿using GestorDeVentas.Clases;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace GestorDeVentas.Formularios.Ventas
 {
     public partial class frmVenta : Form
     {
-        public frmVenta()
+        private List<Articulo> articulo;
+        private List<Cliente> cliente;
+        private List<Proveedor> proveedor;
+        public frmVenta(List<Articulo> articulos, List<Cliente> clientes, List<Proveedor> proveedores)
         {
             InitializeComponent();
+            proveedor = proveedores;
+            articulo = articulos;
+            cliente = clientes;
         }//Constructor
     }//Class
 }//Namespace

@@ -25,17 +25,38 @@ namespace GestorDeVentas
 
         private void AbrirFormHijos(object formHijo)
         {
-            if (this.pnlContenedor.Controls.Count > 0)
-            {
-                this.pnlContenedor.Controls.RemoveAt(0);
-            }
             Form fh = formHijo as Form;
+
+            if(pnlContenedor.Controls.Count > 0)
+            {
+                Form formActual = pnlContenedor.Controls[0] as Form;
+
+                if(formActual.GetType() == fh.GetType())
+                {
+                    formActual.Close();
+                    formActual.Dispose();
+                    return;
+                }
+
+                formActual.Close();
+                formActual.Dispose();
+            }
+
+
+            //if (this.pnlContenedor.Controls.Count > 0)
+            //{
+            //    this.pnlContenedor.Controls.RemoveAt(0);
+            //}
+            //Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.None;
+
             fh.Left = (pnlContenedor.Width - fh.Width) / 2;
             fh.Top = (pnlContenedor.Height - fh.Height) / 2;
+
             this.pnlContenedor.Controls.Add(fh);
             this.pnlContenedor.Tag = fh;
+
             fh.Show();
         }//AbrirFormHijos
 
@@ -91,7 +112,7 @@ namespace GestorDeVentas
 
         private void realizarVentaToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new frmVenta(cliente, proveedor, articulo));
+            AbrirFormHijos(new frmVenta(articulo, cliente, proveedor));
         }
     }//Class
 }//Namespace

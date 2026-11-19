@@ -1,12 +1,17 @@
-﻿using System.Windows.Forms;
+﻿using GestorDeVentas.Clases;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace GestorDeVentas.Formularios.Articulos
 {
     public partial class ModificarArticulo : Form
     {
-        public ModificarArticulo()
+        private List<Articulo> articulo;
+
+        public ModificarArticulo(List<Articulo> listaArticulos)
         {
             InitializeComponent();
+            articulo = listaArticulos;
         }//Constructor
     }//Class
 }//Namespace
