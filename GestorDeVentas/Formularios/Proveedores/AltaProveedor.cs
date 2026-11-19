@@ -25,6 +25,18 @@ namespace GestorDeVentas.Formularios.Proveedores
         {
             try
             {
+                if (proveedor.Any(p => p.CUIT == txtCUIT.Text.Replace("-", "").Trim()))
+                {
+                    MessageBox.Show(
+                        "Ya existe un proveedor registrado con ese CUIT.",
+                        "CUIT duplicado",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+
+                    return;
+                }
+
                 int nuevoId = ObtenerSiguienteId();
 
                 Proveedor nuevoProveedor = new Proveedor(

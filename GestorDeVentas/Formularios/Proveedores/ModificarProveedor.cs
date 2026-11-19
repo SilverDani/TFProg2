@@ -28,28 +28,47 @@ namespace GestorDeVentas.Formularios.Proveedores
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (idSeleccionado <= 0)
+            try
             {
-                MessageBox.Show("Seleccione un proveedor.");
-                return;
+                if (idSeleccionado <= 0)
+                {
+                    MessageBox.Show("Seleccione un proveedor.");
+                    return;
+                }
+
+                Proveedor seleccionado = proveedor.FirstOrDefault(a => a.IdProveedor == idSeleccionado);
+                if (seleccionado != null)
+                {
+                    seleccionado.RazonSocial = txtRazonSocial.Text;
+                    seleccionado.CUIT = txtCUIT.Text;
+
+                    dgvProveedores.DataSource = null;
+                    dgvProveedores.DataSource = proveedor;
+
+                    MessageBox.Show(
+                    "Proveedor Modificado correctamente.",
+                    "Modificación exitosa",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                }
             }
-
-            Proveedor seleccionado = proveedor.FirstOrDefault(a => a.IdProveedor == idSeleccionado);
-            if (seleccionado != null)
+            catch (ArgumentException ex)
             {
-                seleccionado.RazonSocial = txtRazonSocial.Text;
-                seleccionado.CUIT = txtCUIT.Text;
-
-                dgvProveedores.DataSource = null;
-                dgvProveedores.DataSource = proveedor;
-
                 MessageBox.Show(
-                "Proveedor Modificado correctamente.",
-                "Modificación exitosa",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                    ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
             }
+            LimpiarCampos();
         }//btnModificar
 
+        private void LimpiarCampos()
+        {
+            txtRazonSocial.Clear();
+            txtCUIT.Clear();
+            txtRazonSocial.Focus();
+        }
     }//Class
 }//Namespace

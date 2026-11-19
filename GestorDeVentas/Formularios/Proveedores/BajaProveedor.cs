@@ -36,31 +36,48 @@ namespace GestorDeVentas.Formularios.Proveedores
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (idSeleccionado <= 0)
+            try
             {
-                MessageBox.Show("Seleccione un proveedor.");
-                return;
+                if (idSeleccionado <= 0)
+                {
+                    MessageBox.Show("Seleccione un proveedor.");
+                    return;
+                }
+
+
+                Proveedor seleccionado = proveedor.FirstOrDefault(a => a.IdProveedor == idSeleccionado);
+                if (proveedor != null)
+                {
+                    proveedor.Remove(seleccionado);
+
+                    dgvProveedores.DataSource = null;
+                    dgvProveedores.DataSource = proveedor;
+
+                    MessageBox.Show(
+                    "Proveedor eliminado correctamente.",
+                    "Eliminación exitosa",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+                }
             }
-
-
-            Proveedor seleccionado = proveedor.FirstOrDefault(a => a.IdProveedor == idSeleccionado);
-            if (proveedor != null)
+            catch (ArgumentException ex)
             {
-                proveedor.Remove(seleccionado);
-
-                dgvProveedores.DataSource = null;
-                dgvProveedores.DataSource = proveedor;
-
                 MessageBox.Show(
-                "Proveedor eliminado correctamente.",
-                "Eliminación exitosa",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
+                    ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
             }
+            LimpiarCampos();
         }//btnEliminar_click
 
-        //
-
+        private void LimpiarCampos()
+        {
+            txtRazonSocial.Clear();
+            txtCUIT.Clear();
+            txtRazonSocial.Focus();
+        }
     }//Class
 }//Namespace
