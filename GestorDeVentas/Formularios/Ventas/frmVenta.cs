@@ -16,5 +16,10 @@ namespace GestorDeVentas.Formularios.Ventas
             articulo = articulos;
             cliente = clientes;
         }//Constructor
+
+        private void frmVenta_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }//Class
 }//Namespace
