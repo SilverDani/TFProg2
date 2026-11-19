@@ -24,6 +24,15 @@ namespace GestorDeVentas.Formularios.Proveedores
         private void dgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+            if (e.RowIndex < 0) return;
+
+            Proveedor provSeleccionado = (Proveedor)dgvProveedores.Rows[e.RowIndex].DataBoundItem;
+
+            idSeleccionado = provSeleccionado.IdProveedor;
+
+            txtRazonSocial.Text = provSeleccionado.RazonSocial;
+            txtCUIT.Text = provSeleccionado.CUIT;
+
         }//dgv Cell Click
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -50,6 +59,7 @@ namespace GestorDeVentas.Formularios.Proveedores
                     "Modificación exitosa",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+                    LimpiarCampos();
                 }
             }
             catch (ArgumentException ex)
@@ -61,7 +71,6 @@ namespace GestorDeVentas.Formularios.Proveedores
                     MessageBoxIcon.Warning
                 );
             }
-            LimpiarCampos();
         }//btnModificar
 
         private void LimpiarCampos()

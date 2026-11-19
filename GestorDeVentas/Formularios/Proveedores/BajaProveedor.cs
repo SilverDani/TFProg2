@@ -32,6 +32,7 @@ namespace GestorDeVentas.Formularios.Proveedores
 
             txtRazonSocial.Text = provSeleccionado.RazonSocial;
             txtCUIT.Text = provSeleccionado.CUIT;
+
         }//dgv Cell Click
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -58,7 +59,8 @@ namespace GestorDeVentas.Formularios.Proveedores
                     "Eliminación exitosa",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
-                );
+                    );
+                    LimpiarCampos();
                 }
             }
             catch (ArgumentException ex)
@@ -70,7 +72,6 @@ namespace GestorDeVentas.Formularios.Proveedores
                     MessageBoxIcon.Warning
                 );
             }
-            LimpiarCampos();
         }//btnEliminar_click
 
         private void LimpiarCampos()

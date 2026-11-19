@@ -32,7 +32,7 @@
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.lblCUIT = new System.Windows.Forms.Label();
             this.lblRazonSocial = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.SuspendLayout();
@@ -75,15 +75,16 @@
             this.lblRazonSocial.Text = "Razon Social";
             this.lblRazonSocial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnEliminar
+            // btnModificar
             // 
-            this.btnEliminar.Font = new System.Drawing.Font("Arial", 12F);
-            this.btnEliminar.Location = new System.Drawing.Point(279, 406);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(128, 32);
-            this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnModificar.Font = new System.Drawing.Font("Arial", 12F);
+            this.btnModificar.Location = new System.Drawing.Point(279, 406);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(128, 32);
+            this.btnModificar.TabIndex = 5;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // dgvProveedores
             // 
@@ -95,6 +96,7 @@
             this.dgvProveedores.ReadOnly = true;
             this.dgvProveedores.Size = new System.Drawing.Size(395, 294);
             this.dgvProveedores.TabIndex = 4;
+            this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
             // 
             // ModificarProveedor
             // 
@@ -105,7 +107,7 @@
             this.Controls.Add(this.txtRazonSocial);
             this.Controls.Add(this.lblCUIT);
             this.Controls.Add(this.lblRazonSocial);
-            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dgvProveedores);
             this.MaximumSize = new System.Drawing.Size(435, 489);
             this.MinimumSize = new System.Drawing.Size(435, 489);
@@ -124,7 +126,7 @@
         private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.Label lblCUIT;
         private System.Windows.Forms.Label lblRazonSocial;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.DataGridView dgvProveedores;
     }
 }
