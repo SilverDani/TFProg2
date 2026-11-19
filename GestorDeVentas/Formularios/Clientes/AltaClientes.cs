@@ -15,7 +15,7 @@ namespace GestorDeVentas.Formularios.Clientes
             cliente = listaClientes;
         }//Constructor
 
-        private void btnGrabar_Click(object sender, System.EventArgs e)
+        private void btnGrabar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -51,9 +51,14 @@ namespace GestorDeVentas.Formularios.Clientes
                 );
 
             }//try
-            catch
+            catch(ArgumentException ex)
             {
-
+                MessageBox.Show(
+                    ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
             }//catch
         }
 

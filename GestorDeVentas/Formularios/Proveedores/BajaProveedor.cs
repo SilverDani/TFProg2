@@ -18,7 +18,10 @@ namespace GestorDeVentas.Formularios.Proveedores
 
         private void BajaProveedor_Load(object sender, System.EventArgs e)
         {
-            //llenar dgv
+            dgvProveedores.DataSource = null;
+            dgvProveedores.DataSource = proveedor;
+
+            dgvProveedores.RowHeadersVisible = false;
         }//Load
 
         private void dgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)

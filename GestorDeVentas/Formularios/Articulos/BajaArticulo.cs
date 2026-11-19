@@ -21,6 +21,11 @@ namespace GestorDeVentas.Formularios.Articulos
 
         private void BajaArticulo_Load(object sender, System.EventArgs e)
         {
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = articulo;
+
+            dgvArticulos.RowHeadersVisible = false;
+
             cmbProveedor.DataSource = proveedor;
             cmbProveedor.DisplayMember = "RazonSocial";
             cmbProveedor.ValueMember = "IdProveedor";

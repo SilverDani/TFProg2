@@ -24,6 +24,10 @@ namespace GestorDeVentas
         private void Principal_Load(object sender, System.EventArgs e)
         {
             proveedor = new List<Proveedor>();
+            cliente = new List<Cliente>();
+            articulo = new List<Articulo>();
+            ventas = new List<Venta>();
+            detallesVenta = new List<DetalleVenta>();
         }//Load
 
         private void AbrirFormHijos(object formHijo)

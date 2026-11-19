@@ -28,6 +28,10 @@ namespace GestorDeVentas.Formularios.Ventas
 
         private void frmVenta_Load(object sender, System.EventArgs e)
         {
+            dgvDetalleVenta.DataSource = null;
+            dgvDetalleVenta.DataSource = temporalDetalle;
+            dgvDetalleVenta.RowHeadersVisible = false;
+
             cmbArticulo.DataSource = articulo;
             cmbArticulo.DisplayMember = "Nombre";
             cmbArticulo.ValueMember = "IdArticulo";
