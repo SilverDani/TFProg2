@@ -1,10 +1,24 @@
 ﻿using System;
+using System.Linq;
 
 namespace GestorDeVentas.Clases
 {
     public class Proveedor
     {
+        private int idProveedor;
         private string razonSocial, cuit;
+
+        public int IdProveedor
+        {
+            get { return idProveedor; }
+            set
+            {
+                if (value <= 0)
+                    throw new ArgumentException("ID inválido.");
+
+                idProveedor = value;
+            }
+        }
 
         public string RazonSocial
         {
@@ -15,11 +29,7 @@ namespace GestorDeVentas.Clases
                 if (string.IsNullOrWhiteSpace(value))
                     throw new ArgumentException("ERROR: ingrese una Razon social.");
 
-                foreach (char caracter in value)
-                    if (!char.IsLetter(caracter) && !char.IsWhiteSpace(caracter))
-                        throw new ArgumentException("ERROR: Valores introducidos no validos. solo se permite Letras. Ingrese una Razon social valida.");
-
-                razonSocial = value;
+                razonSocial = value.Trim();
             }
         }
         public string CUIT
@@ -28,19 +38,22 @@ namespace GestorDeVentas.Clases
             set
             {
                 if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("ERROR: ingrese un CUIT.");
+                    throw new ArgumentException("Ingrese un CUIT.");
 
-                foreach (char caracter in value)
-                    if (!char.IsLetter(caracter) && !char.IsWhiteSpace(caracter))
-                        throw new ArgumentException("ERROR: Valores introducidos no validos. solo se permite Letras. Ingrese un CUIT valido.");
+                string cuitLimpio = value.Replace("-", "").Trim();
 
-                cuit = value;
+                if (cuitLimpio.Length != 11 ||
+                    !cuitLimpio.All(char.IsDigit))
+                    throw new ArgumentException("El CUIT debe contener 11 dígitos.");
+
+                cuit = cuitLimpio;
             }
         }
 
 
-        public Proveedor(string razonSocial, string cuit)
+        public Proveedor(int idProveedor, string razonSocial, string cuit)
         {
+            IdProveedor = idProveedor;
             RazonSocial = razonSocial;
             CUIT = cuit;
         }//Constructor

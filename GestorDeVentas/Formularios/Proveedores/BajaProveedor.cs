@@ -1,5 +1,7 @@
 ﻿using GestorDeVentas.Clases;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace GestorDeVentas.Formularios.Proveedores
@@ -7,6 +9,7 @@ namespace GestorDeVentas.Formularios.Proveedores
     public partial class BajaProveedor : Form
     {
         private List<Proveedor> proveedor;
+        private int idSeleccionado;
         public BajaProveedor(List<Proveedor> listaProveedor)
         {
             InitializeComponent();
@@ -20,13 +23,37 @@ namespace GestorDeVentas.Formularios.Proveedores
 
         private void dgvProveedores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (e.RowIndex < 0) return;
 
             Proveedor provSeleccionado = (Proveedor)dgvProveedores.Rows[e.RowIndex].DataBoundItem;
 
+            idSeleccionado = provSeleccionado.IdProveedor;
+
             txtRazonSocial.Text = provSeleccionado.RazonSocial;
             txtCUIT.Text = provSeleccionado.CUIT;
         }//dgv Cell Click
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Proveedor seleccionado = proveedor.FirstOrDefault(a => a.IdProveedor == idSeleccionado);
+            if (proveedor != null)
+            {
+                proveedor.Remove(seleccionado);
+
+                dgvProveedores.DataSource = null;
+                dgvProveedores.DataSource = proveedor;
+
+                MessageBox.Show(
+                "Proveedor eliminado correctamente.",
+                "Eliminación exitosa",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+            }
+        }//btnEliminar_click
+
+        //
 
     }//Class
 }//Namespace
