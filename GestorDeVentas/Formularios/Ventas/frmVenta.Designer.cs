@@ -32,7 +32,7 @@
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.txtSubTotal = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDetalleVenta = new System.Windows.Forms.DataGridView();
             this.lblArticulo = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnVender = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbArticulo
@@ -53,6 +53,7 @@
             this.cmbArticulo.Name = "cmbArticulo";
             this.cmbArticulo.Size = new System.Drawing.Size(201, 26);
             this.cmbArticulo.TabIndex = 0;
+            this.cmbArticulo.SelectedIndexChanged += new System.EventHandler(this.cmbArticulo_SelectedIndexChanged);
             // 
             // cmbCliente
             // 
@@ -70,6 +71,7 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 26);
             this.txtCantidad.TabIndex = 2;
+            this.txtCantidad.TextChanged += new System.EventHandler(this.txtCantidad_TextChanged);
             // 
             // txtSubTotal
             // 
@@ -79,16 +81,17 @@
             this.txtSubTotal.Size = new System.Drawing.Size(100, 26);
             this.txtSubTotal.TabIndex = 3;
             // 
-            // dataGridView1
+            // dgvDetalleVenta
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 164);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(983, 288);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvDetalleVenta.AllowUserToAddRows = false;
+            this.dgvDetalleVenta.AllowUserToDeleteRows = false;
+            this.dgvDetalleVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleVenta.Location = new System.Drawing.Point(12, 164);
+            this.dgvDetalleVenta.Name = "dgvDetalleVenta";
+            this.dgvDetalleVenta.ReadOnly = true;
+            this.dgvDetalleVenta.Size = new System.Drawing.Size(983, 288);
+            this.dgvDetalleVenta.TabIndex = 4;
+            this.dgvDetalleVenta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleVenta_CellClick);
             // 
             // lblArticulo
             // 
@@ -139,6 +142,7 @@
             this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Agregar a Lista";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -149,6 +153,7 @@
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar de Lista";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnLimpiar
             // 
@@ -159,6 +164,7 @@
             this.btnLimpiar.TabIndex = 11;
             this.btnLimpiar.Text = "Limpiar Lista";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnVender
             // 
@@ -169,6 +175,7 @@
             this.btnVender.TabIndex = 12;
             this.btnVender.Text = "Vender";
             this.btnVender.UseVisualStyleBackColor = true;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
             // lblTotal
             // 
@@ -176,9 +183,9 @@
             this.lblTotal.Font = new System.Drawing.Font("Arial", 16F);
             this.lblTotal.Location = new System.Drawing.Point(12, 120);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(89, 25);
+            this.lblTotal.Size = new System.Drawing.Size(131, 25);
             this.lblTotal.TabIndex = 13;
-            this.lblTotal.Text = "Total: $ ";
+            this.lblTotal.Text = "Total: $ 0,00";
             // 
             // frmVenta
             // 
@@ -194,7 +201,7 @@
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.lblArticulo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDetalleVenta);
             this.Controls.Add(this.txtSubTotal);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.cmbCliente);
@@ -204,7 +211,7 @@
             this.Name = "frmVenta";
             this.Text = "Venta";
             this.Load += new System.EventHandler(this.frmVenta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleVenta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,7 +223,7 @@
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.TextBox txtSubTotal;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDetalleVenta;
         private System.Windows.Forms.Label lblArticulo;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Label lblCantidad;

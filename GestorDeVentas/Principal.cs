@@ -13,6 +13,9 @@ namespace GestorDeVentas
         private List<Proveedor> proveedor;
         private List<Cliente> cliente;
         private List<Articulo> articulo;
+        private List<Venta> ventas;
+        private List<DetalleVenta> detallesVenta;
+
         public Principal()
         {
             InitializeComponent();
@@ -112,7 +115,7 @@ namespace GestorDeVentas
 
         private void realizarVentaToolStripMenuItem_Click(object sender, System.EventArgs e)
         {
-            AbrirFormHijos(new frmVenta(articulo, cliente, proveedor));
+            AbrirFormHijos(new frmVenta(articulo, cliente, ventas, detallesVenta));
         }
     }//Class
 }//Namespace
