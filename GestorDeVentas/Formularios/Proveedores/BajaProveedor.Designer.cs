@@ -109,6 +109,8 @@
             this.Controls.Add(this.lblRazonSocial);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvProveedores);
+            this.MaximumSize = new System.Drawing.Size(435, 489);
+            this.MinimumSize = new System.Drawing.Size(435, 489);
             this.Name = "BajaProveedor";
             this.Text = "BajaProveedor";
             this.Load += new System.EventHandler(this.BajaProveedor_Load);

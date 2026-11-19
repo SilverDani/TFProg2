@@ -36,6 +36,13 @@ namespace GestorDeVentas.Formularios.Proveedores
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (idSeleccionado <= 0)
+            {
+                MessageBox.Show("Seleccione un proveedor.");
+                return;
+            }
+
+
             Proveedor seleccionado = proveedor.FirstOrDefault(a => a.IdProveedor == idSeleccionado);
             if (proveedor != null)
             {
