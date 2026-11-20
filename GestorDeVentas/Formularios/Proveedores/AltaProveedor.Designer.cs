@@ -52,7 +52,6 @@
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(248, 26);
             this.txtRazonSocial.TabIndex = 1;
-            this.txtRazonSocial.TextChanged += new System.EventHandler(this.txtRazonSocial_TextChanged);
             // 
             // lblCUIT
             // 

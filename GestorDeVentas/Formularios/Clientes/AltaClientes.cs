@@ -49,7 +49,7 @@ namespace GestorDeVentas.Formularios.Clientes
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                 );
-
+                LimpiarCampos();
             }//try
             catch(ArgumentException ex)
             {
@@ -60,6 +60,15 @@ namespace GestorDeVentas.Formularios.Clientes
                     MessageBoxIcon.Warning
                 );
             }//catch
+        }
+
+        private void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtCUIL.Clear();
+            dtpNacimiento.Value = DateTime.Today;
+            txtNombre.Focus();
         }
 
         private int ObtenerSiguienteId()

@@ -16,11 +16,6 @@ namespace GestorDeVentas.Formularios.Proveedores
             proveedor = listaProveedor;
         }//Constructor
 
-        private void txtRazonSocial_TextChanged(object sender, System.EventArgs e)
-        {
-
-        }
-
         private void btnGrabar_Click(object sender, System.EventArgs e)
         {
             try
@@ -53,6 +48,8 @@ namespace GestorDeVentas.Formularios.Proveedores
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information
                 );
+
+                LimpiarCampos();
             }
             catch (ArgumentException ex)
             {
@@ -65,6 +62,13 @@ namespace GestorDeVentas.Formularios.Proveedores
             }
         }//btnGrabar
 
+        private void LimpiarCampos()
+        {
+            txtRazonSocial.Clear();
+            txtCUIT.Clear();
+            txtRazonSocial.Focus();
+        }
+
         private int ObtenerSiguienteId()
         {
             if (proveedor.Count == 0)
@@ -72,6 +76,8 @@ namespace GestorDeVentas.Formularios.Proveedores
 
             return proveedor.Max(p => p.IdProveedor) + 1;
         }
+
+       
 
     }//Class
 }//Namespace

@@ -64,7 +64,7 @@ namespace GestorDeVentas.Formularios.Ventas
             btnVender.Enabled = false;
 
             lblTotal.Text = 0m.ToString("N2");
-        }
+        }//Load
 
         private void btnAgregar_Click(object sender, System.EventArgs e)
         {
@@ -131,7 +131,7 @@ namespace GestorDeVentas.Formularios.Ventas
                     MessageBoxIcon.Warning
                 );
             }
-        }
+        }//Agregar Articulo de Lista
 
         private void btnEliminar_Click(object sender, System.EventArgs e)
         {
@@ -156,7 +156,7 @@ namespace GestorDeVentas.Formularios.Ventas
 
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = false;
-        }
+        }//Eliminar articulo de Lista
 
         private void btnLimpiar_Click(object sender, System.EventArgs e)
         {
@@ -167,7 +167,7 @@ namespace GestorDeVentas.Formularios.Ventas
             ActualizarDgvYTotales();
 
             LimpiarCampos();
-        }
+        }//Limpiar Lista
 
         private void cmbArticulo_SelectedIndexChanged(object sender, System.EventArgs e)
         {
@@ -186,7 +186,7 @@ namespace GestorDeVentas.Formularios.Ventas
             txtCantidad.Text = "1";
 
             CalcularSubtotal();
-        }
+        }//SelectedIndex ComboBox
 
         private void CalcularSubtotal()
         {
@@ -215,12 +215,12 @@ namespace GestorDeVentas.Formularios.Ventas
                 txtSubTotal.Clear();
                 btnAgregar.Enabled = false;
             }
-        }
+        }//CalcularSubTotal
 
         private void txtCantidad_TextChanged(object sender, EventArgs e)
         {
             CalcularSubtotal();
-        }
+        }//Cantidad TextChanged
 
         private void btnVender_Click(object sender, System.EventArgs e)
         {
@@ -264,7 +264,7 @@ namespace GestorDeVentas.Formularios.Ventas
                 // Guardar venta
                 ventas.Add(nuevaVenta);
 
-                temporalDetalle.Clear();
+                //temporalDetalle.Clear();
 
                 // Guardar detalles
                 detallesVenta.AddRange(temporalDetalle);
@@ -303,7 +303,7 @@ namespace GestorDeVentas.Formularios.Ventas
                     MessageBoxIcon.Warning
                 );
             }
-        }
+        }//Vender Click
 
         private void dgvDetalleVenta_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -321,7 +321,7 @@ namespace GestorDeVentas.Formularios.Ventas
 
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
-        }
+        }//Detalle Venta CellClick
 
         private void ActualizarDgvYTotales()
         {
@@ -334,7 +334,7 @@ namespace GestorDeVentas.Formularios.Ventas
 
             btnLimpiar.Enabled = temporalDetalle.Count > 0;
             btnVender.Enabled = temporalDetalle.Count > 0;
-        }
+        }//Actualizar DGVsy totales
 
         private void LimpiarCampos()
         {

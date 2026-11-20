@@ -177,5 +177,8 @@
   <ItemGroup>
     <Content Include="modelo Relacional Proyecto.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resource\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
