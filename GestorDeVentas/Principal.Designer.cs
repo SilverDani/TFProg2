@@ -61,6 +61,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Arial", 10F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionClientesToolStripMenuItem,
             this.proveedorToolStripMenuItem,
@@ -78,28 +79,36 @@
             this.altaCleintesToolStripMenuItem,
             this.modificarCleinteToolStripMenuItem,
             this.bajaClienteToolStripMenuItem});
+            this.gestionClientesToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.gestionClientesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.gestionClientesToolStripMenuItem.Name = "gestionClientesToolStripMenuItem";
-            this.gestionClientesToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.gestionClientesToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
             this.gestionClientesToolStripMenuItem.Text = "Gestion Clientes";
             // 
             // altaCleintesToolStripMenuItem
             // 
+            this.altaCleintesToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.altaCleintesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.altaCleintesToolStripMenuItem.Name = "altaCleintesToolStripMenuItem";
-            this.altaCleintesToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.altaCleintesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaCleintesToolStripMenuItem.Text = "Alta Cleintes";
             this.altaCleintesToolStripMenuItem.Click += new System.EventHandler(this.altaCleintesToolStripMenuItem_Click);
             // 
             // modificarCleinteToolStripMenuItem
             // 
+            this.modificarCleinteToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.modificarCleinteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.modificarCleinteToolStripMenuItem.Name = "modificarCleinteToolStripMenuItem";
-            this.modificarCleinteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.modificarCleinteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarCleinteToolStripMenuItem.Text = "Modificar Cleinte";
             this.modificarCleinteToolStripMenuItem.Click += new System.EventHandler(this.modificarCleinteToolStripMenuItem_Click);
             // 
             // bajaClienteToolStripMenuItem
             // 
+            this.bajaClienteToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.bajaClienteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bajaClienteToolStripMenuItem.Name = "bajaClienteToolStripMenuItem";
-            this.bajaClienteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.bajaClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bajaClienteToolStripMenuItem.Text = "Baja Cliente";
             this.bajaClienteToolStripMenuItem.Click += new System.EventHandler(this.bajaClienteToolStripMenuItem_Click);
             // 
@@ -109,28 +118,36 @@
             this.altaProveedorToolStripMenuItem,
             this.toolStripMenuItem1,
             this.bajaProveedorToolStripMenuItem});
+            this.proveedorToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.proveedorToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.proveedorToolStripMenuItem.Name = "proveedorToolStripMenuItem";
-            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(127, 20);
+            this.proveedorToolStripMenuItem.Size = new System.Drawing.Size(169, 20);
             this.proveedorToolStripMenuItem.Text = "Gestion Proveedores";
             // 
             // altaProveedorToolStripMenuItem
             // 
+            this.altaProveedorToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.altaProveedorToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.altaProveedorToolStripMenuItem.Name = "altaProveedorToolStripMenuItem";
-            this.altaProveedorToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.altaProveedorToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.altaProveedorToolStripMenuItem.Text = "Alta Proveedor";
             this.altaProveedorToolStripMenuItem.Click += new System.EventHandler(this.altaProveedorToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
+            this.toolStripMenuItem1.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.toolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(191, 22);
             this.toolStripMenuItem1.Text = "Modifar Proveedor";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // bajaProveedorToolStripMenuItem
             // 
+            this.bajaProveedorToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.bajaProveedorToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bajaProveedorToolStripMenuItem.Name = "bajaProveedorToolStripMenuItem";
-            this.bajaProveedorToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.bajaProveedorToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.bajaProveedorToolStripMenuItem.Text = "Baja Proveedor";
             this.bajaProveedorToolStripMenuItem.Click += new System.EventHandler(this.bajaProveedorToolStripMenuItem_Click);
             // 
@@ -140,28 +157,36 @@
             this.altaArticuloToolStripMenuItem,
             this.modificarArticuloToolStripMenuItem,
             this.bajaArticuloToolStripMenuItem});
+            this.articulosToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.articulosToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.articulosToolStripMenuItem.Name = "articulosToolStripMenuItem";
-            this.articulosToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.articulosToolStripMenuItem.Size = new System.Drawing.Size(141, 20);
             this.articulosToolStripMenuItem.Text = "Gestion Articulos";
             // 
             // altaArticuloToolStripMenuItem
             // 
+            this.altaArticuloToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.altaArticuloToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.altaArticuloToolStripMenuItem.Name = "altaArticuloToolStripMenuItem";
-            this.altaArticuloToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.altaArticuloToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.altaArticuloToolStripMenuItem.Text = "Alta Articulo";
             this.altaArticuloToolStripMenuItem.Click += new System.EventHandler(this.altaArticuloToolStripMenuItem_Click);
             // 
             // modificarArticuloToolStripMenuItem
             // 
+            this.modificarArticuloToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.modificarArticuloToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.modificarArticuloToolStripMenuItem.Name = "modificarArticuloToolStripMenuItem";
-            this.modificarArticuloToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.modificarArticuloToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.modificarArticuloToolStripMenuItem.Text = "Modificar Articulo";
             this.modificarArticuloToolStripMenuItem.Click += new System.EventHandler(this.modificarArticuloToolStripMenuItem_Click);
             // 
             // bajaArticuloToolStripMenuItem
             // 
+            this.bajaArticuloToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.bajaArticuloToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bajaArticuloToolStripMenuItem.Name = "bajaArticuloToolStripMenuItem";
-            this.bajaArticuloToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.bajaArticuloToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.bajaArticuloToolStripMenuItem.Text = "Baja Articulo";
             this.bajaArticuloToolStripMenuItem.Click += new System.EventHandler(this.bajaArticuloToolStripMenuItem_Click);
             // 
@@ -169,14 +194,18 @@
             // 
             this.ventaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.realizarVentaToolStripMenuItem});
+            this.ventaToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.ventaToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
-            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.ventaToolStripMenuItem.Text = "Venta";
             // 
             // realizarVentaToolStripMenuItem
             // 
+            this.realizarVentaToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
+            this.realizarVentaToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.realizarVentaToolStripMenuItem.Name = "realizarVentaToolStripMenuItem";
-            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.realizarVentaToolStripMenuItem.Text = "Realizar Venta";
             this.realizarVentaToolStripMenuItem.Click += new System.EventHandler(this.realizarVentaToolStripMenuItem_Click);
             // 

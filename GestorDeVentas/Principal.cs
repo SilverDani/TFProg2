@@ -1,14 +1,14 @@
-﻿using GestorDeVentas.Clases;
-using GestorDeVentas.Formularios.Articulos;
-using GestorDeVentas.Formularios.Clientes;
-using GestorDeVentas.Formularios.Proveedores;
-using GestorDeVentas.Formularios.Ventas;
-using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace GestorDeVentas
+﻿namespace GestorDeVentas
 {
+    using GestorDeVentas.Clases;
+    using GestorDeVentas.Formularios.Articulos;
+    using GestorDeVentas.Formularios.Clientes;
+    using GestorDeVentas.Formularios.Proveedores;
+    using GestorDeVentas.Formularios.Ventas;
+    using System;
+    using System.Collections.Generic;
+    using System.Windows.Forms;
+
     public partial class Principal : Form
     {
         private List<Proveedor> proveedor;

@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace GestorDeVentas.Clases
+﻿namespace GestorDeVentas.Clases
 {
+    using System;
+
     public class DetalleVenta
     {
         private int idVenta, idArticulo;
@@ -16,8 +16,8 @@ namespace GestorDeVentas.Clases
                     throw new ArgumentException("ID de venta inválido.");
 
                 idVenta = value;
-            }
-        }
+            }//set
+        }//idventa
 
         public int IdArticulo
         {
@@ -28,8 +28,8 @@ namespace GestorDeVentas.Clases
                     throw new ArgumentException("Seleccione un artículo válido.");
 
                 idArticulo = value;
-            }
-        }
+            }//set
+        }//idArticulo
 
         public decimal Cantidad
         {
@@ -41,8 +41,8 @@ namespace GestorDeVentas.Clases
 
                 cantidad = value;
                 CalcularSubTotal();
-            }
-        }
+            }//set
+        }//Cantidad
 
         public decimal Precio
         {
@@ -54,18 +54,18 @@ namespace GestorDeVentas.Clases
 
                 precio = value;
                 CalcularSubTotal();
-            }
-        }
+            }//set
+        }//Precio
 
         public decimal SubTotal
         {
             get { return subTotal; }
-        }
+        }//SubTotal
 
         private void CalcularSubTotal()
         {
             subTotal = Math.Round(cantidad * precio, 2);
-        }
+        }//CalcularSubTotal
 
         public DetalleVenta(int idVenta, int idArticulo, decimal cantidad, decimal precio)
         {
@@ -73,6 +73,6 @@ namespace GestorDeVentas.Clases
             IdArticulo = idArticulo;
             Cantidad = cantidad;
             Precio = precio;
-        }
-    }
-}
+        }//Constructor
+    }//class
+}//Namespace

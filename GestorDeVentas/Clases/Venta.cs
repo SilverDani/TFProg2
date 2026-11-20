@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace GestorDeVentas.Clases
+﻿namespace GestorDeVentas.Clases
 {
+    using System;
+
     public class Venta
     {
         private int idVenta, idCliente;
@@ -17,8 +17,8 @@ namespace GestorDeVentas.Clases
                     throw new ArgumentException("ID de venta inválido.");
 
                 idVenta = value;
-            }
-        }
+            }//set
+        }//idventa
 
         public int IdCliente
         {
@@ -29,8 +29,8 @@ namespace GestorDeVentas.Clases
                     throw new ArgumentException("Seleccione un cliente válido.");
 
                 idCliente = value;
-            }
-        }
+            }//set
+        }//idcliente
 
         public DateTime Fecha
         {
@@ -44,8 +44,8 @@ namespace GestorDeVentas.Clases
                     throw new ArgumentException("La fecha de venta no puede ser futura.");
 
                 fecha = value.Date;
-            }
-        }
+            }//set
+        }//Fecha
 
         public decimal Total
         {
@@ -56,8 +56,8 @@ namespace GestorDeVentas.Clases
                     throw new ArgumentException("El total no puede ser negativo.");
 
                 total = value;
-            }
-        }
+            }//set
+        }//Total
 
         public Venta(int idVenta, int idCliente, DateTime fecha, decimal total)
         {
@@ -65,6 +65,6 @@ namespace GestorDeVentas.Clases
             IdCliente = idCliente;
             Fecha = fecha;
             Total = total;
-        }
-    }
-}
+        }//Constructor
+    }//Class
+}//NAmespace

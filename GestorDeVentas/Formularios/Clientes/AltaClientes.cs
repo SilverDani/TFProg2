@@ -1,11 +1,11 @@
-﻿using GestorDeVentas.Clases;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace GestorDeVentas.Formularios.Clientes
+﻿namespace GestorDeVentas.Formularios.Clientes
 {
+    using GestorDeVentas.Clases;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public partial class AltaClientes : Form
     {
         private List<Cliente> cliente;

@@ -1,11 +1,11 @@
-﻿using GestorDeVentas.Clases;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace GestorDeVentas.Formularios.Proveedores
+﻿namespace GestorDeVentas.Formularios.Proveedores
 {
+    using GestorDeVentas.Clases;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public partial class BajaProveedor : Form
     {
         private List<Proveedor> proveedor;

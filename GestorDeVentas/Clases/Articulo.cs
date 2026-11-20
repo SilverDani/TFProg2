@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace GestorDeVentas.Clases
+﻿namespace GestorDeVentas.Clases
 {
+    using System;
+
     public class Articulo
     {
 

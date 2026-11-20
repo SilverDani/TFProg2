@@ -1,11 +1,11 @@
-﻿using GestorDeVentas.Clases;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace GestorDeVentas.Formularios.Articulos
+﻿namespace GestorDeVentas.Formularios.Articulos
 {
+    using GestorDeVentas.Clases;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public partial class AltaArticulo : Form
     {
         private List<Articulo> articulo;

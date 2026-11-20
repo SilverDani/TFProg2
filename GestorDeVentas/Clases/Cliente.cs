@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace GestorDeVentas.Clases
+﻿namespace GestorDeVentas.Clases
 {
+    using System;
+    using System.Linq;
+
     public class Cliente
     {
         private int idCliente;
@@ -95,7 +95,7 @@ namespace GestorDeVentas.Clases
             Apellido = apellido;
             CUIL = cuil;
             FechaNacimiento = fechaNacimiento;
-        }
+        }//Constructor
 
     }//Class
 }//NamseSpace

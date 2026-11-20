@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-
-namespace GestorDeVentas.Clases
+﻿namespace GestorDeVentas.Clases
 {
+    using System;
+    using System.Linq;
+
     public class Proveedor
     {
         private int idProveedor;
@@ -17,8 +17,8 @@ namespace GestorDeVentas.Clases
                     throw new ArgumentException("ID inválido.");
 
                 idProveedor = value;
-            }
-        }
+            }//set
+        }//idproveedor
 
         public string RazonSocial
         {
@@ -30,8 +30,8 @@ namespace GestorDeVentas.Clases
                     throw new ArgumentException("ERROR: ingrese una Razon social.");
 
                 razonSocial = value.Trim();
-            }
-        }
+            }//set
+        }//RazonSocial
         public string CUIT
         {
             get { return cuit; }
@@ -47,8 +47,8 @@ namespace GestorDeVentas.Clases
                     throw new ArgumentException("El CUIT debe contener 11 dígitos.");
 
                 cuit = cuitLimpio;
-            }
-        }
+            }//set
+        }//CUIT
 
 
         public Proveedor(int idProveedor, string razonSocial, string cuit)
