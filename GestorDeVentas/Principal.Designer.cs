@@ -30,6 +30,8 @@
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gestionClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaCleintesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarCleinteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,9 +46,10 @@
             this.bajaArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.realizarVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.pnlContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -73,6 +76,26 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // pnlContenedor
+            // 
+            this.pnlContenedor.BackColor = System.Drawing.Color.BlueViolet;
+            this.pnlContenedor.Controls.Add(this.pictureBox1);
+            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedor.Location = new System.Drawing.Point(0, 30);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(1023, 503);
+            this.pnlContenedor.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GestorDeVentas.Properties.Resources.Logo_NCM_Store;
+            this.pictureBox1.Location = new System.Drawing.Point(310, 55);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(378, 378);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // gestionClientesToolStripMenuItem
             // 
             this.gestionClientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -90,7 +113,7 @@
             this.altaCleintesToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
             this.altaCleintesToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.altaCleintesToolStripMenuItem.Name = "altaCleintesToolStripMenuItem";
-            this.altaCleintesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaCleintesToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.altaCleintesToolStripMenuItem.Text = "Alta Cleintes";
             this.altaCleintesToolStripMenuItem.Click += new System.EventHandler(this.altaCleintesToolStripMenuItem_Click);
             // 
@@ -99,7 +122,7 @@
             this.modificarCleinteToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
             this.modificarCleinteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.modificarCleinteToolStripMenuItem.Name = "modificarCleinteToolStripMenuItem";
-            this.modificarCleinteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.modificarCleinteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.modificarCleinteToolStripMenuItem.Text = "Modificar Cleinte";
             this.modificarCleinteToolStripMenuItem.Click += new System.EventHandler(this.modificarCleinteToolStripMenuItem_Click);
             // 
@@ -108,7 +131,7 @@
             this.bajaClienteToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
             this.bajaClienteToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bajaClienteToolStripMenuItem.Name = "bajaClienteToolStripMenuItem";
-            this.bajaClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bajaClienteToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
             this.bajaClienteToolStripMenuItem.Text = "Baja Cliente";
             this.bajaClienteToolStripMenuItem.Click += new System.EventHandler(this.bajaClienteToolStripMenuItem_Click);
             // 
@@ -205,18 +228,9 @@
             this.realizarVentaToolStripMenuItem.Image = global::GestorDeVentas.Properties.Resources.cerrar_simbolo_de_boton_circular;
             this.realizarVentaToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.realizarVentaToolStripMenuItem.Name = "realizarVentaToolStripMenuItem";
-            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.realizarVentaToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.realizarVentaToolStripMenuItem.Text = "Realizar Venta";
             this.realizarVentaToolStripMenuItem.Click += new System.EventHandler(this.realizarVentaToolStripMenuItem_Click);
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.BackColor = System.Drawing.Color.BlueViolet;
-            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(0, 30);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1023, 503);
-            this.pnlContenedor.TabIndex = 2;
             // 
             // Principal
             // 
@@ -233,6 +247,9 @@
             this.pnlMenu.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.pnlContenedor.ResumeLayout(false);
+            this.pnlContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,6 +273,7 @@
         private System.Windows.Forms.ToolStripMenuItem ventaToolStripMenuItem;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.ToolStripMenuItem realizarVentaToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

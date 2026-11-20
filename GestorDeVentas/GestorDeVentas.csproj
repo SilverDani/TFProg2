@@ -178,6 +178,7 @@
   <ItemGroup>
     <Content Include="modelo Relacional Proyecto.txt" />
     <Content Include="Resource\cerrar-simbolo-de-boton-circular.png" />
+    <None Include="Resource\Logo NCM Store.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
